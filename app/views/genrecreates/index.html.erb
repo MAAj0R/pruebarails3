@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Genrecreates</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @genrecreates.each do |genrecreate| %>
+      <tr>
+        <td><%= genrecreate.name %></td>
+        <td><%= link_to 'Show', genrecreate %></td>
+        <td><%= link_to 'Edit', edit_genrecreate_path(genrecreate) %></td>
+        <td><%= link_to 'Destroy', genrecreate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Genrecreate', new_genrecreate_path %>
